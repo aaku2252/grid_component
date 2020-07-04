@@ -1,0 +1,103 @@
+html {
+	font-size: 75%;
+
+	@media screen and (min-width: $bp-medium) {
+		font-size: 100%;
+	}
+}
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: rgb(206, 224, 223);
+	font-family: "Work Sans", sans-serif;
+}
+
+.container {
+	margin: 5rem auto;
+	width: 85vw;
+	box-shadow: $box-shadow;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	@media screen and (min-width: $bp-medium) {
+		width: 65vw;
+	}
+}
+.details {
+	grid-column: 1/-1;
+	background-color: #fff;
+	padding: 2rem;
+	letter-spacing: 1px;
+	line-height: 1.7;
+	@media screen and (min-width: $bp-medium) {
+		padding: 2rem 4rem;
+	}
+
+	&_heading {
+		font-size: 1.2rem;
+		color: $color-primary-dark;
+	}
+	&_subheading {
+		font-size: 1rem;
+		color: $color-secondary;
+	}
+	&_text {
+		letter-spacing: initial;
+		color: $color-grey;
+		font-size: 0.8rem;
+	}
+}
+.price {
+	grid-column: 1/-1;
+	background-color: $color-primary-dark;
+	padding: 2rem;
+	letter-spacing: 1px;
+	color: #fff;
+
+	@media screen and (min-width: $bp-medium) {
+		grid-column: 1;
+		padding: 2rem 4rem;
+	}
+	&_heading {
+		font-size: 1.2rem;
+	}
+
+	&_value {
+		font-size: 2.2rem;
+		font-weight: 600;
+		padding: 0;
+		small {
+			font-size: 1rem;
+			font-weight: 100;
+			color: $color-grey-light;
+			vertical-align: middle;
+			margin-left: 1rem;
+		}
+	}
+	&_text {
+		font-size: 0.9rem;
+		color: $color-grey-light;
+	}
+}
+.services {
+	grid-column: 1/-1;
+	background-color: $color-primary;
+	padding: 2rem;
+	letter-spacing: 1px;
+	line-height: 1.7;
+	color: #fff;
+	@media screen and (min-width: $bp-medium) {
+		grid-column: 2;
+		padding: 2rem 4rem;
+	}
+
+	&_heading {
+		font-size: 1.2rem;
+	}
+	&_list {
+		list-style: none;
+		padding: 0;
+		font-size: 0.8rem;
+		color: $color-grey-light;
+	}
+}
